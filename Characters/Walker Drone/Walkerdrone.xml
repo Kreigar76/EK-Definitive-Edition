@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character speciesname="Walkerdrone" humanoid="False" group="human" tags="ek_drone,ek_allied_drone,ek_recoverable_drone" HasInfo="False" CanInteract="True" CanClimb="True" Husk="False" UseHuskAppendage="False" NeedsAir="true" NeedsWater="False" CanSpeak="False" UseBossHealthBar="False" Noise="100" Visibility="100" BloodDecal="" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="False" EatingSpeed="10" UsePathFinding="True" PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="True" SonarDisruption="0" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10" DrawLast="False" IsMachine="True">
+  <ragdolls folder="%ModDir%/Characters/Walker Drone/Ragdolls/" />
+  <animations folder="%ModDir%/Characters/Walker Drone/Animations/" />
+  <health Vitality="100" DoesBleed="False" crushdepth="Infinity" UseHealthWindow="False" BleedingReduction="0" BurnReduction="2" ConstantHealthRegeneration="0.5" HealthRegenerationWhenEating="0" PoisonImmunity="True" ApplyAfflictionColors="False" empvulnerability="1">
+    <Limb>
+      <VitalityMultiplier type="burn" multiplier="0.5" />
+    </Limb>
+  </health>
+  <Inventory Slots="Any,Card" AccessibleWhenAlive="True">
+    <Item Identifier="defensebotammobox" slot="Any" />
+    <Item identifier="idcard" equip="true" />
+  </Inventory>
+  <ai UsePathFindingToGetInside="True" CombatStrength="105" Sight="2" Hearing="1" AggressionHurt="0" AggressionGreed="0" FleeHealthThreshold="0" AttackWhenProvoked="True" AvoidGunfire="False" DamageThreshold="0" AvoidTime="3" MinFleeTime="20" AggressiveBoarding="False" EnforceAggressiveBehaviorForMissions="False" TargetOuterWalls="False" RandomAttack="False" CanOpenDoors="True" KeepDoorsClosed="False" AvoidAbyss="True" StayInAbyss="False" PatrolFlooded="False" PatrolDry="False" StartAggression="0" MaxAggression="100" AggressionCumulation="0" WallTargetingMethod="Target">
+    <target Tag="hostile" State="Aggressive" Priority="50" ReactDistance="1500" AttackDistance="1500" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="True" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target Tag="stronger" State="Aggressive" Priority="50" ReactDistance="1500" AttackDistance="1500" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="True" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target Tag="weaker" State="Aggressive" Priority="50" ReactDistance="1500" AttackDistance="1500" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="True" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target Tag="equal" State="Aggressive" Priority="50" ReactDistance="1500" AttackDistance="1500" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="True" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target Tag="owner" State="Protect" Priority="10" ReactDistance="150" AttackDistance="0" Timer="0" IgnoreContained="False" IgnoreInside="False" IgnoreOutside="False" IgnoreIfNotInSameSub="False" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" CircleRotationSpeed="1" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <petbehavior maxhappiness="100" happinessdecreaserate="0" hungerincreaserate="0" playforce="0" toggleowner="true" hidestatusindicators="true" playcooldown="0"/>
+  </ai>
+  <damageemitter particle="shrapnel" drawontop="True" particleamount="5" velocitymin="50" velocitymax="300" anglemin="0" anglemax="360" scalemin="1" scalemax="2" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <damageemitter particle="weldspark" drawontop="True" particleamount="5" velocitymin="50" velocitymax="600" anglemin="0" anglemax="360" scalemin="1.5" scalemax="2" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="blackwaterblood" anglemin="1" anglemax="2" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" particleamount="10" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="weldspark" drawontop="True" particleamount="5" velocitymin="50" velocitymax="600" anglemin="0" anglemax="360" scalemin="1.5" scalemax="2" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <StatusEffect type="Always" target="Character">
+    <ReduceAffliction identifier="organdamage" amount="200" />
+    <ReduceAffliction identifier="bloodloss" amount="200" />
+    <ReduceAffliction identifier="stun" amount="100" />
+    <ReduceAffliction identifier="radiationsickness" amount="200" />
+    <ReduceAffliction identifier="poison" amount="200" />
+  </StatusEffect>
+    <StatusEffect type="OnDeath" target="This">
+    <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
+  </StatusEffect>
+  <StatusEffect type="OnDeath" target="This" disabledeltatime="true" stackable="false" delay="0.15">
+    <Explosion range="200.0" structuredamage="10" itemdamage="35" stun="1" force="15.0" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
+      <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" type="OnUse" range="2500" selectionmode="All" />
+      <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" type="OnUse" range="2000" />
+      <Affliction identifier="burn" strength="60" />
+      <Affliction identifier="internaldamage" strength="80" />
+      <Affliction identifier="bleeding" strength="25" />
+    </Explosion>
+    <SpawnItem identifier="ek_walkerdrone_wreck" spawnposition="This" />
+    <RemoveCharacter />
+  </StatusEffect>
+  <!--
+  <StatusEffect type="Always" targettype="This" comparison="or">
+    <Conditional hastag="ek_drone_disarm_tag"/>
+    <Conditional hasStatusTag="ek_drone_disarm_tag"/>
+    <Conditional HasStatusEffect="ek_drone_disarm" />
+    <Sound file="%ModDir%/Items/Weapons/Sounds/ek_impactmine_disarmed.ogg" range="1500" />
+    <SpawnItem identifier="ek_gundrone" spawnposition="This"/>
+    <RemoveCharacter />
+  </StatusEffect>-->
+  <!-- Recover drones using status-effect | Todo: Wait for this to work -->
+  <StatusEffect type="OnDamaged" targettype="This">
+    <RequiredItem item="defensebotammobox" type="Picked" RequireEmpty="true" targetslot="0" />
+    <Sound File="Content/Characters/Defensebot/DEFENCEBOT_interact2.ogg" Range="500" loop="false"/>
+    <AITrigger state="Escape" duration="5" allowtobeoverridden="false" allowtooverride="true" />
+  </StatusEffect>
+  <StatusEffect type="Always" target="Character">
+    <Conditional ek_drone_disarm="gte 10" />
+    <Affliction identifier="stun" strength="300" />
+  </StatusEffect>
+  <StatusEffect type="Always" target="Character">
+    <Conditional ek_drone_disarm="eq 90" />
+    <Sound file="%ModDir%/Items/Weapons/Sounds/ek_drone_disarm.ogg" range="1500" />
+    <SpawnItem identifier="ek_walkerdrone" spawnposition="This" />
+    <RemoveCharacter />
+  </StatusEffect>
+</Character>
